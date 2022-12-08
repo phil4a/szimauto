@@ -1,0 +1,11 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+	border-radius: rem(10);
+}
+.title {
+	font-family: $ff;
+	@include adaptiveValue('font-size', 32, 20);
+	line-height: math.div(36, 32);
+	text-align: center;
+	@include adaptiveValue('margin-bottom', 40, 20);
+}

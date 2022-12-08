@@ -1,0 +1,113 @@
+.hero {
+	&__container {
+		display: flex;
+		align-items: center;
+		padding-top: rem(60);
+		padding-bottom: rem(60);
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		max-width: rem(535);
+		@include adaptiveValue('max-width', 535, 190);
+		@media (max-width: $tablet) {
+			margin-right: rem(10);
+		}
+	}
+
+	&__title {
+		font-family: $ff;
+		font-weight: 400;
+		font-size: rem(64);
+		@include adaptiveValue('font-size', 64, 22);
+		line-height: math.div(80, 64);
+		color: #353535;
+		@include adaptiveValue('margin-bottom', 20, 14);
+	}
+
+	&__desc {
+		font-size: rem(36);
+		@include adaptiveValue('font-size', 36, 16);
+		line-height: math.div(44, 36);
+		color: #353535;
+		@include adaptiveValue('margin-bottom', 20, 14);
+	}
+
+	&__button-price {
+		@include adaptiveValue('padding-top', 15, 8);
+		@include adaptiveValue('padding-bottom', 15, 8);
+		@include adaptiveValue('padding-left', 15, 12);
+		@include adaptiveValue('padding-right', 15, 12);
+		margin-bottom: rem(20);
+		@include adaptiveValue('margin-bottom', 20, 8);
+		max-width: rem(300);
+		@include adaptiveValue('max-width', 300, 160);
+		font-weight: 700;
+		@include adaptiveValue('font-size', 16, 10);
+		line-height: math.div(20, 16);
+		background-color: $accentColor;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $accentHover;
+			}
+		}
+	}
+
+	&__button-order {
+		padding: rem(13);
+		max-width: rem(170);
+		font-weight: 700;
+		@include adaptiveValue('font-size', 16, 10);
+		line-height: math.div(20, 16);
+		background-color: #3ca6c7;
+		color: #fff;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #226074;
+			}
+		}
+	}
+
+	&__image {
+	}
+
+	&__car {
+		position: relative;
+		@include adaptiveValue('width', 663, 319);
+		img {
+			width: 100%;
+		}
+	}
+
+	&__star {
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		display: block;
+		position: absolute;
+		top: -40px;
+		right: 0;
+		@include adaptiveValue('right', 0, 200);
+		width: rem(155);
+		height: rem(155);
+		background-image: url('@img/star.svg');
+		background-repeat: no-repeat;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		p {
+			text-transform: uppercase;
+			transform: rotate(15deg);
+			max-width: rem(90);
+			text-align: center;
+			font-weight: 700;
+			font-size: rem(16);
+			line-height: math.div(20, 16);
+		}
+	}
+}
+.button {
+}
