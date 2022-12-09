@@ -5883,7 +5883,7 @@ window.onload = function () {
 function createSelectBrands() {
 	const selectBrand = document.createElement('select');
 	selectBrand.id = 'brands';
-	selectBrand.style.cssText = 'padding: 5px;width: 100%;';
+	// selectBrand.style.cssText = 'padding: 5px;width: 100%;';
 
 	let htmlBrand;
 	htmlBrand += `<option>Выберите марку авто</option>`;
@@ -5892,13 +5892,13 @@ function createSelectBrands() {
 	}
 
 	selectBrand.innerHTML = htmlBrand;
-	document.getElementById('calc1').appendChild(selectBrand);
+	document.getElementById('car-brand').appendChild(selectBrand);
 
 	var selectModels = document.createElement('select');
 	selectModels.id = 'models';
-	selectModels.style.cssText = 'padding: 5px;width: 100%;';
+	// selectModels.style.cssText = 'padding: 5px;width: 100%;';
 	selectModels.innerHTML = '<option>Выберите модель</option>';
-	document.getElementById('calc2').appendChild(selectModels);
+	document.getElementById('car-model').appendChild(selectModels);
 
 	document.getElementById('brands').onchange = function () {
 		if (document.getElementById('links')) {
@@ -5909,7 +5909,7 @@ function createSelectBrands() {
 		if (!isset) {
 			createModels();
 		} else {
-			document.getElementById('calc2').removeChild(isset);
+			document.getElementById('car-model').removeChild(isset);
 			createModels();
 		}
 	};
@@ -5925,7 +5925,7 @@ function createModels() {
 
 	var selectModel = document.createElement('select');
 	selectModel.id = 'models';
-	selectModel.style.cssText = 'padding: 5px;    width: 100%; ';
+	// selectModel.style.cssText = 'padding: 5px;    width: 100%; ';
 
 	var htmlModel;
 	htmlModel += `<option>Выберите модель</option>`;
@@ -5935,10 +5935,10 @@ function createModels() {
 	}
 	selectModel.innerHTML = htmlModel;
 
-	document.getElementById('calc2').appendChild(selectModel);
+	document.getElementById('car-model').appendChild(selectModel);
 }
 
-const modelButton = document.querySelector('.model-button');
+const modelButton = document.querySelector('.calc-select__button');
 modelButton.addEventListener('click', createLinks);
 
 // отрисовка ссылок на решения

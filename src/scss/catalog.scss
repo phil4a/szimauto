@@ -13,6 +13,7 @@
 		@include adaptiveValue('font-size', 24, 16);
 		line-height: math.div(20, 16);
 		text-align: center;
+		@include adaptiveValue('margin-bottom', 45, 20);
 	}
 
 	&__items {
@@ -62,4 +63,147 @@
 		font-size: rem(18);
 		line-height: math.div(22, 18);
 	}
+}
+
+.selection {
+	@include adaptiveValue('padding-top', 40, 20);
+	@include adaptiveValue('padding-bottom', 40, 20);
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue('margin-bottom', 20, 14);
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-weight: 700;
+		@include adaptiveValue('font-size', 24, 16);
+		line-height: math.div(29, 24);
+		margin-bottom: rem(40);
+	}
+
+	&__calc {
+	}
+}
+.calc-select {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+	flex-wrap: wrap;
+	&__form {
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		@include adaptiveValue('gap', 18, 16);
+		padding: rem(35) rem(30);
+		border: 2px solid #ffa300;
+		border-radius: 10px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&__brand {
+	}
+
+	&__model {
+	}
+
+	&__button {
+		color: #fff;
+		background-color: $accentColor;
+		font-weight: 700;
+		@include adaptiveValue('font-size', 30, 16);
+		line-height: math.div(37, 30);
+		text-align: center;
+		@include adaptiveValue('padding-top', 16, 12);
+		@include adaptiveValue('padding-bottom', 16, 12);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #353535;
+				background-color: $accentHover;
+			}
+		}
+	}
+
+	&__result {
+		flex: 1 0 rem(400);
+		flex-grow: 1;
+		flex-shrink: 1;
+		@include adaptiveValue('flex-basis', 400, 290);
+	}
+}
+.result {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	&__text {
+		margin-bottom: rem(-10);
+		@include adaptiveValue('font-size', 24, 18);
+	}
+	&__img {
+		position: relative;
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+
+	&__num {
+		position: absolute;
+		bottom: 0;
+		bottom: rem(10);
+		@include adaptiveValue('right', 10, 25);
+		right: 0;
+		@include adaptiveValue('width', 142, 80);
+		@include adaptiveValue('height', 142, 80);
+		background-image: url(@img/num_bg.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		p {
+			font-family: $ff;
+			color: $accentColor;
+			@include adaptiveValue('font-size', 70, 40);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__size {
+		margin-top: rem(-25);
+		@include adaptiveValue('font-size', 18, 14);
+		line-height: math.div(22, 18);
+	}
+	&__btn {
+		margin-top: rem(15);
+		padding: rem(10) rem(50);
+		border-radius: rem(10);
+		background-color: #3ca6c7;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		@include adaptiveValue('font-size', 24, 16);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #255c6d;
+			}
+		}
+	}
+}
+
+#brands,
+#models {
+	font-family: $fontFamily;
+	@include adaptiveValue('padding', 20, 10);
+	font-weight: 400;
+	background-color: #f0f0f0;
+	border-radius: rem(5);
+	@include adaptiveValue('font-size', 22, 14);
+	width: 100%;
 }
