@@ -61,6 +61,8 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: rem(16);
+		line-height: math.div(16, 12);
+		text-align: center;
 		transition: all 0.3s ease 0s;
 		cursor: pointer;
 		@media (any-hover: hover) {

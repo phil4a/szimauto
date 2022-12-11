@@ -1,20 +1,43 @@
-<header class="header">
+<header data-scroll="94" data-scroll-show="100" class="header">
 	<div class="header__container">
 		<a href="/" class="header__logo">
 			<img src="@img/szimauto-logo.svg" alt="" />
 		</a>
+		<div class="header__hidden-phone">
+			<a href="tel:+79835104850">+7 (983) 510-48-50</a>
+		</div>
 		<div class="header__menu menu">
 			<button type="button" class="menu__icon icon-menu"><span></span></button>
 			<nav class="menu__body">
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a href="" class="menu__link">Автоодеяло</a>
+						<a href="#" data-goto-header data-goto=".odeyalo" class="menu__link"
+							>Автоодеяло</a
+						>
 					</li>
-					<li class="menu__item"><a href="" class="menu__link">Каталог</a></li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Оптовикам</a>
+						<a href="" data-goto-header data-goto=".catalog" class="menu__link"
+							>Каталог</a
+						>
 					</li>
-					<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+					<li class="menu__item">
+						<a
+							href="#"
+							data-goto-header
+							data-goto=".wholesale"
+							class="menu__link"
+							>Оптовикам</a
+						>
+					</li>
+					<li class="menu__item">
+						<a
+							href="#"
+							data-goto-header
+							data-goto=".contacts"
+							class="menu__link"
+							>Контакты</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</div>
