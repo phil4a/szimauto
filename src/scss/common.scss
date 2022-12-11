@@ -9,3 +9,15 @@
 	text-align: center;
 	@include adaptiveValue('margin-bottom', 40, 20);
 }
+
+.baloon {
+	h2 {
+		font-family: $ff;
+		font-weight: 700;
+		font-size: rem(14);
+		margin-bottom: rem(5);
+	}
+	p {
+		font-family: $fontFamily;
+	}
+}

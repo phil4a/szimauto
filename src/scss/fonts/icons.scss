@@ -1,5 +1,5 @@
 %ic {
-	font-family: "icons";
+	font-family: 'icons';
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -8,9 +8,18 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-[class*="_icon-"] {
+[class*='_icon-'] {
 	&:before {
 		@extend %ic;
 		display: block;
 	}
+}
+._icon-email:before {
+	content: '\e900';
+}
+._icon-location-dot-solid:before {
+	content: '\e901';
+}
+._icon-phone-volume-solid:before {
+	content: '\e902';
 }
