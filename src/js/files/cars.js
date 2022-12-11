@@ -4297,9 +4297,10 @@ const carsLinks = {
 	Хантер: ['5', '160 x 90 см'],
 };
 
-window.onload = function () {
-	createSelectBrands();
-};
+// window.onload = function () {
+// 	createSelectBrands();
+// };
+document.addEventListener('DOMContentLoaded', createSelectBrands);
 
 // отрисовка селекторов выбора бренда и автомобиля
 function createSelectBrands() {
@@ -4381,8 +4382,10 @@ function createLinks() {
 	const imgCircle = document.querySelector('.result__num');
 	const numRes = imgCircle.querySelector('p');
 	const sizeRes = document.querySelector('.result__size');
+	const btnRes = document.querySelector('.result__btn');
 
 	//Добавляем класс, там указываем в бэкгоаунде картинку с нужным номером n1-n5
+	btnRes.style.opacity = 1;
 	imgCircle.style.opacity = 1;
 
 	modelHTML.style.opacity = 1;
