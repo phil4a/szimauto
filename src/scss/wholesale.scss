@@ -1,0 +1,119 @@
+.wholesale {
+	text-align: center;
+	background-color: $darkBg;
+	color: #fff;
+	@include adaptiveValue('padding-top', 40, 20);
+	@include adaptiveValue('padding-bottom', 40, 20);
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__advanantages {
+		margin-top: rem(30);
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: rem(50);
+		@include adaptiveValue('gap', 50, 15);
+		@media (min-width: $mobile) {
+			flex-direction: row;
+		}
+	}
+
+	&__howto {
+	}
+
+	&__btn {
+		@include adaptiveValue('margin-top', 30, 0);
+		background-color: $accentColor;
+		text-transform: uppercase;
+		@include adaptiveValue('padding-top', 15, 10);
+		@include adaptiveValue('padding-bottom', 15, 10);
+		@include adaptiveValue('padding-left', 40, 20);
+		@include adaptiveValue('padding-right', 40, 20);
+		font-weight: 700;
+		@include adaptiveValue('font-size', 20, 16);
+		line-height: math.div(28, 20);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #000;
+				background-color: $accentHover;
+			}
+		}
+	}
+}
+
+.advantages-wholesale {
+	&__image {
+		flex: 1 1 auto;
+		@media (min-width: $mobile) {
+			flex: 0 1 rem(544);
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		@include adaptiveValue('font-size', 20, 16);
+		font-weight: 700;
+		@include adaptiveValue('margin-bottom', 40, 20);
+	}
+
+	&__list {
+		text-align: left;
+		padding-left: rem(10);
+		flex: 1 1 auto;
+		font-size: rem(16);
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+			@include adaptiveValue('margin-bottom', 40, 20);
+		}
+	}
+}
+.howto-wholesale {
+	padding-top: rem(40);
+	padding-bottom: rem(60);
+
+	&__title {
+		font-weight: 700;
+		text-align: center;
+		@include adaptiveValue('font-size', 24, 20);
+	}
+
+	&__list {
+		@include adaptiveValue('margin-top', 40, 20);
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: rem(30);
+	}
+
+	&__item {
+		flex: 1 0 rem(250);
+		text-align: center;
+	}
+}
+.item-howto {
+	&__image {
+	}
+
+	&__number {
+		margin-top: rem(17);
+		font-size: rem(26);
+		font-weight: 700;
+	}
+
+	&__text {
+		margin-top: rem(15);
+		font-size: 20px;
+		font-size: rem(20);
+		line-height: math.div(30, 20);
+	}
+}
